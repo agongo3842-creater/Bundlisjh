@@ -1,0 +1,475 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, ShieldCheck, Scissors, Heart, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+
+const textures = [
+  {
+    name: "Bundlish Coil",
+    description: "Defined coils with rich volume for a soft, natural-textured finish.",
+    tag: "Coily texture",
+    price: "From GHS 950",
+    lengths: "12–24 inches",
+  },
+  {
+    name: "Bundlish Ria",
+    description: "A balanced textured curl made for fullness, movement, and everyday styling.",
+    tag: "Signature blend",
+    price: "From GHS 900",
+    lengths: "12–24 inches",
+  },
+  {
+    name: "Bundlish Curl",
+    description: "Soft curls with bounce and shape, perfect for refined but effortless looks.",
+    tag: "Curly texture",
+    price: "From GHS 850",
+    lengths: "12–24 inches",
+  },
+  {
+    name: "Natural Straight Pro",
+    description: "A natural straight finish that still carries texture, body, and realistic movement.",
+    tag: "Natural straight",
+    price: "From GHS 800",
+    lengths: "12–26 inches",
+  },
+];
+
+const bundles = [
+  {
+    name: "Single Bundle",
+    price: "GHS 800–1,200",
+    detail: "Best for adding volume or replacing one bundle.",
+  },
+  {
+    name: "Full Sew-in Set",
+    price: "GHS 2,400–3,600",
+    detail: "Three bundles for a complete, natural-looking install.",
+  },
+  {
+    name: "Luxury Fullness Set",
+    price: "GHS 3,200–4,800",
+    detail: "Four bundles for fuller volume and longer lengths.",
+  },
+];
+
+const bundles = [
+  {
+    name: "Single Bundle",
+    price: "GHS 800–1,200",
+    detail: "Best for adding volume or replacing one bundle.",
+  },
+  {
+    name: "Full Sew-in Set",
+    price: "GHS 2,400–3,600",
+    detail: "Three bundles for a complete, natural-looking install.",
+  },
+  {
+    name: "Luxury Fullness Set",
+    price: "GHS 3,200–4,800",
+    detail: "Four bundles for fuller volume and longer lengths.",
+  },
+];
+
+const bundles = [
+  {
+    name: "Single Bundle",
+    price: "GHS 800–1,200",
+    detail: "Best for adding volume or replacing one bundle.",
+  },
+  {
+    name: "Full Sew-in Set",
+    price: "GHS 2,400–3,600",
+    detail: "Three bundles for a complete, natural-looking install.",
+  },
+  {
+    name: "Luxury Fullness Set",
+    price: "GHS 3,200–4,800",
+    detail: "Four bundles for fuller volume and longer lengths.",
+  },
+];
+
+const features = [
+  {
+    icon: ShieldCheck,
+    title: "Premium textured hair",
+    text: "Made for women who want extensions that blend beautifully with natural hair textures.",
+  },
+  {
+    icon: Scissors,
+    title: "Install-ready guidance",
+    text: "Braid-down tips, sew-in advice, and care support to help each texture last longer.",
+  },
+  {
+    icon: Heart,
+    title: "Soft luxury feel",
+    text: "Clean visuals, honest texture education, and a brand experience that feels calm and premium.",
+  },
+];
+
+export default function BundlishWebsiteHomepage() {
+  return (
+    <div className="min-h-screen bg-[#FBF7F2] text-[#24160F]">
+      <header className="sticky top-0 z-50 border-b border-[#E7D9CC] bg-[#FBF7F2]/90 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#24160F] text-sm font-semibold text-[#FBF7F2]">
+              B
+            </div>
+            <div>
+              <p className="text-lg font-semibold tracking-tight">Bundlish</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-[#8B6B58]">Textured Hair</p>
+            </div>
+          </div>
+
+          <nav className="hidden items-center gap-8 text-sm font-medium text-[#5D4637] md:flex">
+            <a href="#textures" className="hover:text-[#24160F]">Textures</a>
+            <a href="#prices" className="hover:text-[#24160F]">Prices</a>
+            <a href="#care" className="hover:text-[#24160F]">Hair Care</a>
+            <a href="#education" className="hover:text-[#24160F]">Learn</a>
+            <a href="#contact" className="hover:text-[#24160F]">Contact</a>
+          </nav>
+
+          <Button className="rounded-full bg-[#24160F] px-5 text-[#FBF7F2] hover:bg-[#3A261A]">
+            Shop now
+          </Button>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative overflow-hidden px-5 py-16 md:px-8 md:py-24">
+          <div className="absolute left-[-10%] top-10 h-72 w-72 rounded-full bg-[#D8BFA7]/40 blur-3xl" />
+          <div className="absolute bottom-10 right-[-8%] h-80 w-80 rounded-full bg-[#B88C69]/30 blur-3xl" />
+
+          <div className="relative mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-[1.05fr_0.95fr]">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65 }}
+              className="space-y-8"
+            >
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#E0CDBB] bg-white/50 px-4 py-2 text-sm text-[#6C4D3A]">
+                <Sparkles className="h-4 w-4" />
+                Premium textured extensions rooted in natural beauty
+              </div>
+
+              <div className="space-y-5">
+                <h1 className="max-w-3xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+                  Hair that blends like it belongs.
+                </h1>
+                <p className="max-w-xl text-lg leading-8 text-[#6C4D3A]">
+                  Bundlish creates premium textured hair extensions for women who want natural-looking volume, softness, and confidence without losing the beauty of their own texture.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button className="h-12 rounded-full bg-[#24160F] px-7 text-[#FBF7F2] hover:bg-[#3A261A]">
+                  Explore textures
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <Button variant="outline" className="h-12 rounded-full border-[#CDB6A4] bg-transparent px-7 text-[#24160F] hover:bg-[#F3E8DD]">
+                  Learn how to install
+                </Button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="relative"
+            >
+              <div className="aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-[#2B1B12] via-[#7A4B35] to-[#D9B38E] p-4 shadow-2xl">
+                <div className="flex h-full flex-col justify-between rounded-[1.5rem] border border-white/20 bg-black/15 p-6 text-[#FBF7F2] backdrop-blur-sm">
+                  <div className="flex justify-between text-sm uppercase tracking-[0.25em] text-white/70">
+                    <span>Bundlish</span>
+                    <span>Ghana</span>
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-4xl font-semibold tracking-[-0.04em]">Coil. Curl. Natural Straight.</p>
+                    <p className="max-w-sm text-sm leading-6 text-white/75">
+                      A premium texture library designed for realistic blending, protective styling, and everyday confidence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <Card className="absolute -bottom-7 left-5 w-[85%] rounded-3xl border-[#E4D4C6] bg-white/90 shadow-xl backdrop-blur md:-left-10 md:w-80">
+                <CardContent className="p-5">
+                  <div className="mb-3 flex gap-1 text-[#8C5B37]">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+                  </div>
+                  <p className="text-sm leading-6 text-[#5D4637]">
+                    “It blends so well, people think it’s my natural hair.”
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        <section id="textures" className="px-5 py-20 md:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#8B6B58]">Texture library</p>
+                <h2 className="max-w-2xl text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
+                  Choose the texture that feels like you.
+                </h2>
+              </div>
+              <p className="max-w-md text-base leading-7 text-[#6C4D3A]">
+                Each Bundlish texture is presented with care guidance, blend notes, and styling ideas so customers buy with confidence.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-4">
+              {textures.map((texture) => (
+                <Card key={texture.name} className="group rounded-[1.75rem] border-[#E4D4C6] bg-white/65 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+                  <CardContent className="p-5">
+                    <div className="mb-5 aspect-square rounded-[1.25rem] bg-gradient-to-br from-[#311E14] via-[#8F6349] to-[#D7B393]" />
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#9A765E]">{texture.tag}</p>
+                    <h3 className="mb-3 text-xl font-semibold">{texture.name}</h3>
+                    <p className="text-sm leading-6 text-[#6C4D3A]">{texture.description}</p>
+                    <div className="mt-5 rounded-2xl bg-[#F4E8DD] p-4">
+                      <p className="text-base font-semibold text-[#24160F]">{texture.price}</p>
+                      <p className="mt-1 text-xs uppercase tracking-[0.18em] text-[#8B6B58]">{texture.lengths}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="prices" className="px-5 py-20 md:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 text-center">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#8B6B58]">Price guide</p>
+              <h2 className="text-4xl font-semibold tracking-[-0.04em] md:text-5xl">Simple pricing for every hair goal.</h2>
+              <p className="mx-auto mt-5 max-w-2xl leading-8 text-[#6C4D3A]">
+                Prices can be adjusted by length, texture, density, and availability. Customers can order through WhatsApp for exact pricing.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {bundles.map((bundle) => (
+                <Card key={bundle.name} className="rounded-[2rem] border-[#E4D4C6] bg-white/75 shadow-sm">
+                  <CardContent className="p-7">
+                    <h3 className="mb-3 text-2xl font-semibold">{bundle.name}</h3>
+                    <p className="mb-4 text-3xl font-semibold tracking-[-0.04em] text-[#24160F]">{bundle.price}</p>
+                    <p className="mb-6 leading-7 text-[#6C4D3A]">{bundle.detail}</p>
+                    <Button className="w-full rounded-full bg-[#24160F] text-[#FBF7F2] hover:bg-[#3A261A]">
+                      Order on WhatsApp
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="prices" className="px-5 py-20 md:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 text-center">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#8B6B58]">Price guide</p>
+              <h2 className="text-4xl font-semibold tracking-[-0.04em] md:text-5xl">Simple pricing for every hair goal.</h2>
+              <p className="mx-auto mt-5 max-w-2xl leading-8 text-[#6C4D3A]">
+                Prices can be adjusted by length, texture, density, and availability. Customers can order through WhatsApp for exact pricing.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {bundles.map((bundle) => (
+                <Card key={bundle.name} className="rounded-[2rem] border-[#E4D4C6] bg-white/75 shadow-sm">
+                  <CardContent className="p-7">
+                    <h3 className="mb-3 text-2xl font-semibold">{bundle.name}</h3>
+                    <p className="mb-4 text-3xl font-semibold tracking-[-0.04em] text-[#24160F]">{bundle.price}</p>
+                    <p className="mb-6 leading-7 text-[#6C4D3A]">{bundle.detail}</p>
+                    <Button className="w-full rounded-full bg-[#24160F] text-[#FBF7F2] hover:bg-[#3A261A]">
+                      Order on WhatsApp
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="prices" className="px-5 py-20 md:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 text-center">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#8B6B58]">Price guide</p>
+              <h2 className="text-4xl font-semibold tracking-[-0.04em] md:text-5xl">Simple pricing for every hair goal.</h2>
+              <p className="mx-auto mt-5 max-w-2xl leading-8 text-[#6C4D3A]">
+                Prices can be adjusted by length, texture, density, and availability. Customers can order through WhatsApp for exact pricing.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {bundles.map((bundle) => (
+                <Card key={bundle.name} className="rounded-[2rem] border-[#E4D4C6] bg-white/75 shadow-sm">
+                  <CardContent className="p-7">
+                    <h3 className="mb-3 text-2xl font-semibold">{bundle.name}</h3>
+                    <p className="mb-4 text-3xl font-semibold tracking-[-0.04em] text-[#24160F]">{bundle.price}</p>
+                    <p className="mb-6 leading-7 text-[#6C4D3A]">{bundle.detail}</p>
+                    <Button className="w-full rounded-full bg-[#24160F] text-[#FBF7F2] hover:bg-[#3A261A]">
+                      Order on WhatsApp
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="education" className="bg-[#24160F] px-5 py-20 text-[#FBF7F2] md:px-8">
+          <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+            <div className="space-y-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D8BFA7]">Beyond install videos</p>
+              <h2 className="text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
+                Education that makes textured hair easier to wear.
+              </h2>
+              <p className="text-base leading-8 text-[#E8D8C8]/80">
+                Bundlish can become the trusted place for braid-down tips, leave-out care, sew-in advice, texture comparison, washing routines, and styling inspiration.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {features.map((feature) => {
+                const Icon = feature.icon;
+                return (
+                  <Card key={feature.title} className="rounded-[1.75rem] border-white/10 bg-white/10 text-[#FBF7F2] shadow-none backdrop-blur">
+                    <CardContent className="p-5">
+                      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FBF7F2] text-[#24160F]">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <h3 className="mb-3 text-lg font-semibold">{feature.title}</h3>
+                      <p className="text-sm leading-6 text-[#E8D8C8]/75">{feature.text}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section id="care" className="px-5 py-20 md:px-8">
+          <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
+            <Card className="rounded-[2rem] border-[#E4D4C6] bg-white/70 shadow-sm">
+              <CardContent className="p-8 md:p-10">
+                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#8B6B58]">Care guide</p>
+                <h2 className="mb-5 text-4xl font-semibold tracking-[-0.04em]">Keep every bundle soft, full, and beautiful.</h2>
+                <p className="mb-7 leading-8 text-[#6C4D3A]">
+                  Give customers a simple aftercare experience: wash days, detangling, heat advice, product recommendations, and nighttime protection.
+                </p>
+                <Button className="rounded-full bg-[#24160F] px-6 text-[#FBF7F2] hover:bg-[#3A261A]">
+                  View hair care tips
+                </Button>
+              </CardContent>
+            </Card>
+
+            <div className="grid gap-5">
+              {["How to choose your Bundlish texture", "Best braid-down pattern for sew-ins", "How to make leave-out blend naturally"].map((item, index) => (
+                <div key={item} className="flex items-center justify-between rounded-[1.5rem] border border-[#E4D4C6] bg-white/55 p-5">
+                  <div className="flex items-center gap-4">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EFE1D4] text-sm font-semibold text-[#6C4D3A]">0{index + 1}</span>
+                    <p className="font-medium">{item}</p>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-[#8B6B58]" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="reviews" className="px-5 pb-20 md:px-8">
+          <div className="mx-auto rounded-[2.5rem] bg-[#EAD9C8] p-8 md:p-14 max-w-7xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#8B6B58]">Bundlish promise</p>
+              <h2 className="mb-6 text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
+                Natural texture. Premium finish. Confident women.
+              </h2>
+              <p className="mb-8 text-base leading-8 text-[#6C4D3A]">
+                Build the website around trust: true texture photos, clear product education, simple care instructions, and a smooth shopping path.
+              </p>
+              <Button className="h-12 rounded-full bg-[#24160F] px-8 text-[#FBF7F2] hover:bg-[#3A261A]">
+                Start shopping
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section id="contact" className="px-5 pb-20 md:px-8">
+          <div className="mx-auto grid max-w-7xl gap-6 rounded-[2.5rem] bg-[#24160F] p-8 text-[#FBF7F2] md:grid-cols-[1fr_0.8fr] md:p-12">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#D8BFA7]">Order Bundlish</p>
+              <h2 className="mb-5 text-4xl font-semibold tracking-[-0.04em]">Ready to find your texture?</h2>
+              <p className="max-w-xl leading-8 text-[#E8D8C8]/80">
+                Send a message with your preferred texture, length, and install style. Bundlish will help you choose the best bundle set.
+              </p>
+            </div>
+            <div className="rounded-[2rem] bg-white/10 p-6">
+              <p className="mb-2 text-sm uppercase tracking-[0.2em] text-[#D8BFA7]">Contact</p>
+              <p className="mb-4 text-2xl font-semibold">WhatsApp: +233 XX XXX XXXX</p>
+              <p className="text-[#E8D8C8]/75">Instagram: @bundlish</p>
+              <Button className="mt-6 w-full rounded-full bg-[#FBF7F2] text-[#24160F] hover:bg-[#E8D8C8]">
+                Message on WhatsApp
+              </Button>
+            </div>
+          </div>
+        </section>
+
+      <section id="contact" className="px-5 pb-20 md:px-8">
+          <div className="mx-auto grid max-w-7xl gap-6 rounded-[2.5rem] bg-[#24160F] p-8 text-[#FBF7F2] md:grid-cols-[1fr_0.8fr] md:p-12">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#D8BFA7]">Order Bundlish</p>
+              <h2 className="mb-5 text-4xl font-semibold tracking-[-0.04em]">Ready to find your texture?</h2>
+              <p className="max-w-xl leading-8 text-[#E8D8C8]/80">
+                Send a message with your preferred texture, length, and install style. Bundlish will help you choose the best bundle set.
+              </p>
+            </div>
+            <div className="rounded-[2rem] bg-white/10 p-6">
+              <p className="mb-2 text-sm uppercase tracking-[0.2em] text-[#D8BFA7]">Contact</p>
+              <p className="mb-4 text-2xl font-semibold">WhatsApp: +233 XX XXX XXXX</p>
+              <p className="text-[#E8D8C8]/75">Instagram: @bundlish</p>
+              <Button className="mt-6 w-full rounded-full bg-[#FBF7F2] text-[#24160F] hover:bg-[#E8D8C8]">
+                Message on WhatsApp
+              </Button>
+            </div>
+          </div>
+        </section>
+
+      <section id="contact" className="px-5 pb-20 md:px-8">
+          <div className="mx-auto grid max-w-7xl gap-6 rounded-[2.5rem] bg-[#24160F] p-8 text-[#FBF7F2] md:grid-cols-[1fr_0.8fr] md:p-12">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#D8BFA7]">Order Bundlish</p>
+              <h2 className="mb-5 text-4xl font-semibold tracking-[-0.04em]">Ready to find your texture?</h2>
+              <p className="max-w-xl leading-8 text-[#E8D8C8]/80">
+                Send a message with your preferred texture, length, and install style. Bundlish will help you choose the best bundle set.
+              </p>
+            </div>
+            <div className="rounded-[2rem] bg-white/10 p-6">
+              <p className="mb-2 text-sm uppercase tracking-[0.2em] text-[#D8BFA7]">Contact</p>
+              <p className="mb-4 text-2xl font-semibold">WhatsApp: +233 XX XXX XXXX</p>
+              <p className="text-[#E8D8C8]/75">Instagram: @bundlish</p>
+              <Button className="mt-6 w-full rounded-full bg-[#FBF7F2] text-[#24160F] hover:bg-[#E8D8C8]">
+                Message on WhatsApp
+              </Button>
+            </div>
+          </div>
+        </section>
+
+      <footer className="border-t border-[#E7D9CC] px-5 py-8 md:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-[#6C4D3A] md:flex-row">
+          <p>© 2026 Bundlish. Premium textured hair extensions.</p>
+          <div className="flex gap-5">
+            <a href="#" className="hover:text-[#24160F]">Instagram</a>
+            <a href="#" className="hover:text-[#24160F]">TikTok</a>
+            <a href="#" className="hover:text-[#24160F]">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
